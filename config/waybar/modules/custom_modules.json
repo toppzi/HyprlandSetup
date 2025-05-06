@@ -1,0 +1,32 @@
+{
+    "custom/power": {
+        "format": "⏻",
+        "on-click": "hyprctl dispatch exit",
+        "tooltip": false
+    },
+    
+    "custom/separator": {
+        "format": "|",
+        "interval": "once",
+        "tooltip": false
+    },
+    
+    "custom/weather": {
+        "exec": "curl 'https://wttr.in/?format=%C+%t'",
+        "interval": 3600,
+        "format": "{}",
+        "tooltip": false
+    },
+    
+    "custom/media": {
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources
+    }
+}
